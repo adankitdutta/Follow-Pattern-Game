@@ -121,8 +121,9 @@ footer{
 .close {
   color: #FEF2BF;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
+  padding-top: 10px;
 }
 
 .close:hover,
