@@ -1,12 +1,13 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin:  5% 5% 3%;
   color: #FEF2BF;
 }
 
@@ -14,13 +15,13 @@ body {
   padding: 15px;
   font-family: 'Press Start 2P', cursive;
   background-color: black;
-  color: white;
-  border: 2px solid white;
+  color: #FEF2BF;
+  border: 2px solid #FEF2BF;
   border-radius: 7px;
   font-size: 1.7rem;
 }
 #start:hover {
-  background-color: white;
+  background-color: #FEF2BF;
   color: black;
 }
 
@@ -69,9 +70,95 @@ footer{
   text-align: center;
   margin: 25px;
   font-size: 1rem;
-  color: #fff;
+  color: #FEF2BF;
   font-family: 'Press Start 2P', cursive;
 }
+
+/*Instruction modal*/
+#myBtn{
+  padding: 15px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: black;
+  color: #FEF2BF;
+  border: 2px solid #FEF2BF;
+  border-radius: 7px;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+#myBtn:hover {
+  background-color: #FEF2BF;
+  color: black;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #FEF2BF;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #FEF2BF;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #011F3F;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #011F3F;
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+}
+
+.modal-body {
+  padding: 2px 16px;
+font-size: 1.5rem;
+color: #011F3F;
+text-align: left;}
+
 
 @media (max-width:1028px){
   .container {
@@ -84,16 +171,37 @@ footer{
     width: 340px;
   }
   #start{
-    margin: 5%;
+    margin: 3%;
     padding: 40px;
     font-size: 3rem;
   }
   #level-title {
     font-size: 4rem;
-    margin:  20% 10% 10%;
+    margin:  15% 10% 5%;
   }
+  #myBtn{
+    margin: 3%;
+    padding: 40px;
+    font-size: 3rem;
+  }
+  .modal-content {
+    width: 80%;
+  }
+  .modal-header {
+    background-color: #011F3F;
+    color: #FEF2BF;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.4rem;
+  }
+  .modal-body {
+    padding: 2px 16px;
+  font-size: 1.9rem;
+  color: #011F3F;
+  text-align: left;
+}
   footer{
     font-size: 2rem;
     margin-top: 120px;
   }
+
 }

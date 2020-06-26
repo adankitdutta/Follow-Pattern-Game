@@ -9,8 +9,46 @@
 </head>
 
 <body>
-  <h1 id="level-title">FOLOW THE PATTERN!</h1>
+  <h1 id="level-title">FOLLOW THE PATTERN!</h1>
+  <!-- Trigger/Open The Modal for playing instruction-->
+  <button id="myBtn">HOW TO PLAY</button>
+  <br />
   <button id="start">PLAY</button>
+
+  <!-- The Modal for how to play -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>HOW TO PLAY</h2>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>
+            Click the PLAY Button to start the game.
+          </li>
+          <li>
+            Press the color which flashes on the screen.
+          </li>
+          <li>
+            Then next colour will flash,you need to press the first color and then the successive one.
+          </li>
+          <li>
+            The pattern of colour flashing must be remembered by the player.
+          </li>
+          <li>
+            Then the player needs to press the colours in that order to go to successive levels.
+          </li>
+          <li>
+            When pattern matching fails,the game is over.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
   <div class="container">
     <div class="row">
 
@@ -36,9 +74,8 @@
 
   </div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="game.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
 </body>
 <footer>
   © Ankit Dutta

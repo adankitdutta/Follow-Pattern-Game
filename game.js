@@ -5,10 +5,38 @@ var userClickedPattern=[];
 var started=false;
 var level=0;
 
+/*modal*/
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 $(start).click(function(event){
   if(!started){
     $("#level-title").text("Level "+level);
     $('#start').hide();
+    $('#myBtn').hide();
     nextSequence();
     started=true;
   }
@@ -23,8 +51,6 @@ $(".btn").click(function(){
   checkAnswer(userClickedPattern.length-1);
 });
 
-
-
 function checkAnswer(currentLevel){
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
      if (userClickedPattern.length === gamePattern.length){
@@ -37,6 +63,7 @@ function checkAnswer(currentLevel){
      $("body").addClass("game-over");
      $("#level-title").text("GAME OVER😥");
      $('#start').show();
+     $('#myBtn').show();
      $('#start').text('PLAY AGAIN!');
      setTimeout(function () {
        $("body").removeClass("game-over");
