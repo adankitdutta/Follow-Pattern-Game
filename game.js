@@ -4,7 +4,6 @@ var userClickedPattern=[];
 
 var started=false;
 var level=0;
-
 /*modal*/
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -34,9 +33,9 @@ window.onclick = function(event) {
 
 $(start).click(function(event){
   if(!started){
-    $("#level-title").text("Level "+level);
     $('#start').hide();
     $('#myBtn').hide();
+    $("#level-title").text("Level "+level);
     nextSequence();
     started=true;
   }
@@ -44,11 +43,12 @@ $(start).click(function(event){
 
 
 $(".btn").click(function(){
+  if(started===true){
   var userChosenColor=$(this).attr("id");
   userClickedPattern.push(userChosenColor);
   playSound(userChosenColor);
   animatePress(userChosenColor);
-  checkAnswer(userClickedPattern.length-1);
+  checkAnswer(userClickedPattern.length-1);}
 });
 
 function checkAnswer(currentLevel){
